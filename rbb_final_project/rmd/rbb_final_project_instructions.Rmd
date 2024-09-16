@@ -1,0 +1,135 @@
+---
+title: "RBB Q3 | Final (Capstone) Project Instructions"
+output:
+  prettydoc::html_pretty:
+    theme: architect
+    toc: true
+author: "GRAPH Courses Team"
+date: "2024-09-17"
+editor_options: 
+  chunk_output_type: inline
+---
+
+```{r echo =F, warning=F, message=F}
+# Load packages 
+if(!require(pacman)) install.packages("pacman")
+pacman::p_load(tidyverse)
+```
+
+# **Introduction**
+
+Dear Students,
+
+Congratualtions on mastering the fundamentals of data analysis in R! So far in this course, you have achieved the following:
+
+-   Built a strong understanding of the basics of R programming, RStudio, and data exploration, and R Markdown, while collaborating with your peers.
+
+-   Learned to handle messy data with ease with `{dplyr}` functions for manipulating datasets, and build the skills to clean, filter, and transform data for analysis and visualization.
+
+-   Learned to communicate findings clearly by creating stunning data visualizations with `{ggplot2}`.
+
+As we come to the end of your 3-month learning journey, it's time to showcase your data analysis expertise with the Captsone Project!
+
+# **Assignment Requirements**
+
+For the capstone project, you will use Demographic and Health Survey (DHS) data to create an Rmarkdown-based report, focusing on a specific country and a topic of your choosing. Example reports from RBB alumni are provided in Appendix 1.
+
+## **Minimum Requirements**
+
+The final report should:
+
+-   Analyze data from one of the country-level DHS women's individual recode survey datasets we have compiled for you [here](https://drive.google.com/drive/u/0/folders/1J0gw4qpfbB8bYFbXx8QcsQEWgJSVwp_P), or an approved alternative (see Appendix 4).
+
+-   Contain a minimum of 600 words of descriptive text.
+
+-   Include at least four meaningful graphs and one data table.
+
+-   Look professional and presentable to a public audience.
+
+Submissions that do not meet these minimum requirements will be not be evaluated and the author will be asked to resubmit.
+
+[**IMPORTANT:**]{style="color: red;"} While we have compiled a selection of women's invidual recode data for easy access *(linked below in Step 1)*, please note that this only contains questionnaire data. If you are a pursuing a topic that requires biomarker data, you will need to request it from the DHS. Furthermore, if you would like to use other datasets, you are also free to do so.
+
+## **Full Grading Rubric**
+
+We will be using the following rubric to evaluate your work. As you write your report, **you should closely refer to this list** and make sure to **fulfill each requirement**!
+
+### **Data Wrangling (35%)**
+
+Demonstrate that you have used appropriate data wrangling techniques to prepare the data for analysis.
+
+**Importing and cleaning DHS data**: Use the {haven} package to import and covert variables from the DHS dataset. Rename variables appropriately. This has been covered extensively in the Workshop 10 exercise and Week 11 prework guide.
+
+**Competency with `{dplyr}`**: Use AT LEAST four of these eight functions covered in the data wrangling chapter: `select()`, `filter()`, `mutate()`, `case_when()`, `group_by()`, `summarize()`, `pivot_wider()` and `pivot_longer()`.
+
+### **Data Visualization (35%)**
+
+**Competency with `{ggplot2}`**: Include AT LEAST four plots and use AT LEAST 2 different `geom` functions. Demonstrate that you can use AT LEAST two of the following **`{ggplot2}`** features: `scale` functions, `position` adjustments, `coord` functions, or `facet` functions.
+
+**Quality and professionalism**: Figures are clear, informative, and aesthetically pleasing. Add appropriate titles and clean up any messy text labels on your figures. We recommend you use a consistent `theme` and color scheme to maintain a professional look.
+
+**Tables**: Include AT LEAST one [display table](https://the-graph-courses.github.io/r_foundations_wp/lessons/ls06_rmarkdown.html#74_Display_tables) using one of the following packages: `{flextable}`, `{gt}`, or `{reactable}`.
+
+### **Use of Rmarkdown (20%)**
+
+Demonstrate that you can use R Markdown to create a professional document. This entails using appropriate formatting of header levels and RMarkdown features such as [inline code](https://the-graph-courses.github.io/r_foundations_wp/lessons/ls06_rmarkdown.html#73_Inline_Code). Use appropriate [chunk options](https://the-graph-courses.github.io/r_foundations_wp/lessons/ls06_rmarkdown.html#72_R_code_chunk_options) to show or hide code outputs from the final document.
+
+### **Good Programming Practices (10%)**
+
+**Syntax and code formatting**: Use clean, well-organized code that is easy to read and understand. This includes using appropriate indentation, commenting your code, neat piping, and using clear, descriptive variable names.
+
+**Project folder structure**: Give your project an appropriate name, and organize your files in sensible subfolders (e.g., data, rmd, images, etc.). Review the [RStudio Projects lesson](https://the-graph-courses.github.io/r_foundations_wp/lessons/ls05_projects.html) to refresh your memory.
+
+# **Final Step: Export and Submit your Work**
+
+Once your work is done, to submit it you should knit your Rmd to produce your publication-ready final report! This can be as an HTML/PDF or DOCX format.
+
+To submit, you should upload a zip your project folder and upload it to the assignment page.
+
+# **Appendix 1: Sample Reports**
+
+To get a sense of what we're looking for, review these exemplary submissions from past students:
+
+-   [Emmanuel Ariong](https://the-graph-courses.github.io/rbb_q1_2024_materials/sample_capstone_projects/Ariong_Emmanuel_final_project.html)
+-   [Dickman Pangaume Gareta](https://the-graph-courses.github.io/rbb_q1_2024_materials/sample_capstone_projects/CapstoneProject_final_Dickman_Gareta.html)
+-   [Holy Andriamasy](https://the-graph-courses.github.io/rbb_q1_2024_materials/sample_capstone_projects/Final_Project_HolyAndriamasy.html)
+-   [Christian Duru](https://the-graph-courses.github.io/rbb_q1_2024_materials/sample_capstone_projects/rbb_final_project.html)
+-   [Perpetua Mbachu](https://the-graph-courses.github.io/rbb_q1_2024_materials/sample_capstone_projects/perpetua_final_project.html)
+
+Notice how these reports are well-structured, and present insightful analysis on a public health topic.
+
+# **Appendix 2: Information About the DHS**
+
+The Demographic and Health Surveys (DHS) are a series of standardized surveys conducted periodically in developing countries that collect data on various aspects of population, health, and nutrition.
+
+You can learn more about the DHS program and the various surveys they run by watching the following [video](https://www.youtube.com/watch?v=abP6xeb50Do){target="_blank"}. To hear about the different types of data the DHS collects, you can watch the following [video](https://www.youtube.com/watch?v=BmiSDPebmgc){target="_blank"}.
+
+Finally, to see the kind of reports that are created from the DHS surveys, visit this [page](https://dhsprogram.com/publications/index.cfm){target="_blank"}.
+
+# **Appendix 3: Dos and Don'ts**
+
+-   [***Don't***]{style="color: red;"} leave spelling and grammar mistakes in your final report. ChatGPT is a fast and easy tool for proofreading.
+
+-   [***Don't***]{style="color: red;"} include code chunks in the final document (your knitted report)!
+
+-   [***Do***]{style="color: green;"} use inline code to reference statistics in the main text of your report! For a refresher on how to do this, review the [R Markdown lesson](https://the-graph-courses.github.io/r_foundations_wp/lessons/ls06_rmarkdown.html) or Workshop 3: Challenge 2.
+
+-   [***Do***]{style="color: green;"} structure your report with section headings that have a logical flow (e.g., Introduction, Background, Aims, Findins, Conclusions, References). You can also use non-traditional section titles like in [this](https://dhsprogram.com/pubs/pdf/AB20/AB20.pdf) DHS analysis brief.
+
+# **Appendix 4: Other FAQs**
+
+**My percentages and numbers differ slightly with those seen in the official DHS publications. What is going on?**
+
+Your calculated statistics will differ slightly from the official numbers because these official reports use weighted analysis, which we have not yet taught you. This is okay. For those of you interested, you can find a small example of weighted survey analysis [here](https://github.com/the-graph-courses/rbp_cohort_0_final_assessment/blob/main/scripts/example_of_weighted_survey_analysis.R){target="_blank"}.
+
+**Must the report be in English?**
+
+You are allowed to write the report in English, French or Spanish.
+
+**Can I use data from a different survey than the Demographic and Health Survey (DHS)?**
+
+Yes, but you will first need to obtain permission from one of our instructors!
+
+**Can I create a dashboard using flexdashboard instead of a flat HTML/PDF document?**
+
+Yes. Any Rmarkdown-based format is acceptable!
