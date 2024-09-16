@@ -48,7 +48,7 @@ The final report should:
 
 Submissions that do not meet these minimum requirements will be not be evaluated and the author will be asked to resubmit.
 
-[**IMPORTANT:**]{style="color: red;"} While we have compiled a selection of women's invidual recode data for easy access *(linked below in Step 1)*, please note that this only contains questionnaire data. If you are a pursuing a topic that requires biomarker data, you will need to request it from the DHS. Furthermore, if you would like to use other datasets, you are also free to do so.
+[**IMPORTANT:**]{style="color: red;"} While we have compiled a selection of women's invidual recode data for easy access *(linked above)*, please note that this only contains questionnaire data. If you are a pursuing a topic that requires biomarker data, you will need to request it from the DHS. Furthermore, if you would like to use other datasets, you are also free to do so.
 
 ## **Full Grading Rubric**
 
